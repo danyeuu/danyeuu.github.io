@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Realidad Virtual</title>
+     <script src="js/aframe.min.js"></script> 
+</head>
+<body>
+
+<a-scene>
+  <a-assets>
+    <img id="texturaCubo" src="imagen/piedras.jpg">
+    <img id="TexturaPiso" src="imagen/cielo.jpg">
+    <img id="texturaCielo" src="imagen/cielo.jpg">
+      <a-asset-item id="demog-obj" src="modelos3d/demog.obj"></a-asset-item>
+    <a-asset-item id="demog-mtl" src="modelos3d/demog.mtl"></a-asset-item>
+    <a-asset-item id="eleven-obj" src="modelos3d/eleven.obj"></a-asset-item>
+    <a-asset-item id="eleven-mtl" src="modelos3d/eleven.mtl"></a-asset-item>
+    <a-asset-item id="will-obj" src="modelos3d/will.obj"></a-asset-item>
+    <a-asset-item id="will-mtl" src="modelos3d/will.mtl"></a-asset-item>
+      <a-asset-item id="mike-obj" src="modelos3d/mike.obj"></a-asset-item>
+    <a-asset-item id="mike-mtl" src="modelos3d/mike.mtl"></a-asset-item>
+       <a-asset-item id="dustin-obj" src="modelos3d/dustin.obj"></a-asset-item>
+    <a-asset-item id="dustin-mtl" src="modelos3d/dustin.mtl"></a-asset-item>
+       <a-asset-item id="lucas-obj" src="modelos3d/lucas.obj"></a-asset-item>
+    <a-asset-item id="lucas-mtl" src="modelos3d/lucas.mtl"></a-asset-item>
+    </a-assets>
+  
+    
+  <a-sky height="2048" radius="30" src="#texturaCielo" theta-length="90" width="2048"></a-sky>
+  <a-light type="ambient" color="#445451"></a-light>
+  <a-light type="point" intensity="2" position=".197 13.896 .411"></a-light>
+  <a-plane src="#TexturaPiso" rotation="-90 0 0" height="100" width="100"></a-plane>
+  <a-text value="&iexcl; &#161;STRANGER THINGS" color="#BBB"
+          position="-0.9 .588 -3" rotation="0 80 0" scale="1.5 1.5 1.5"></a-text>
+    
+          
+<!-- Agregar un modelo 3d en formato .obj -->  
+<a-entity obj-model="obj: #demog-obj; mtl: #demog-mtl"  position=".184 .847 -4.065" scale=".1 .1 .1" rotation=".0 64 .0"> </a-entity>
+  <a-entity obj-model="obj: #eleven-obj; mtl: #eleven-mtl"  position="2 -.021 5.804" scale=".1 .1 .1" rotation=".0 180 .0"> </a-entity>
+  <a-entity obj-model="obj: #will-obj; mtl: #will-mtl"  position="-8.593 .2 -.641" scale=".1 .1 .1" rotation=".0 100 .0"></a-entity>  
+  <a-entity obj-model="obj: #mike-obj; mtl: #mike-mtl"  position="7.890 .2 -.998" scale=".1 .1 .1" rotation=".0 -90 .0"></a-entity>
+    <a-entity obj-model="obj: #dustin-obj; mtl: #dustin-mtl"  position="-6.928 .196 -11.702" scale=".1 .1 .1" rotation=".0 40 .0"></a-entity>  
+  <a-entity obj-model="obj: #lucas-obj; mtl: #lucas-mtl"  position="4.779 .2 -12.322" scale=".1 .1 .1" rotation=".900 -30 1.680"></a-entity>
+        
+          
+  <a-camera>
+    <a-cursor color="#FAFAFA">
+  </a-camera>
+</a-scene>   
+</body>
+</html>
